@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    //利用arr.reduce(function(currentSum,current){});返回当前的数组的和
+
+    var arr = [1,2,3,4,5];
+    /*var sum = arr.reduce(function(currentSum,current){
+        return currentSum + current;
+    })
+    console.log(sum);*/
+    //利用slice进行递归的求和
+    function sum(arr){
+        if(arr.length ===1){
+            return arr[0];
+        }else {
+            return arr[0]+sum(arr.slice(1));
+        }
+    }
+
+   console.log(sum(arr));
+</script>
+</html>

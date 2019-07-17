@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    //arr.indexof(value)返回值在数组中的第一个下标，查找不到返回-1；
+
+    //arr.lastindexOf(value)返回值在数组中的最后的一个下标
+
+    //arr.forEach(function(item,index){})//遍历数组输出数组中的每个值和对应的下标
+
+    //var newArr = arr.map(function(item,index){})遍历数组，操作数组中的值返回新的数组，原数组不变
+    //var newArr = arr.map(function(item,index){return item+10})
+
+    //var newArr = arr.filter(function(item,index){})过滤出满足要求的数组返回新的数组。
+    //var newArr = arr.filter(function(item,index){return item>10})
+    var arr = [1,2,3,4,5,3];
+    console.log(arr.indexOf(9));
+    console.log(arr.lastIndexOf(3));
+    var sum = 0;
+    arr.forEach(function(item,index){
+        console.log(`${item}--->${index}`)
+        sum = sum +item;
+    })
+    //console.log(sum);
+   var newArr =  arr.map(function(item,index){
+        return item +10;
+    })
+    console.log(newArr);
+    console.log(arr);
+    var newArr2 = arr.filter(function(item,index){
+        return item > 3;
+    })
+    console.log(newArr2);
+</script>
+</html>
